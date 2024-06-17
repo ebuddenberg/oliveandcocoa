@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "group_id": 1,
+      "title": "Planning",
+      "description": "The planning group",
+      "sort_order": "1",
+      "url": "/planning",
+      "type": "Group",
+      "active": true,
+      "subGroups": [
+        {
+          "type": "SubGroup",
+          "group": "Planning",
+          "parent_id": 1,
+          "group_id": 2,
+          "title": "Report G1SG1",
+          "description": "Tooltip that displays on hover",
+          "sort_order": "1",
+          "search_text": "Additional text to be searched by the autofill in the search bar",
+          "items": [
+            {
+              "type": "Item",
+              "group": "SG Reports itm1",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Available to Sell ",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "1",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "group_id": 2,
+      "title": "Ecommerce",
+      "description": "The planning group",
+      "sort_order": "2",
+      "url": "/planning2",
+      "type": "Group",
+      "active": true,
+      "subGroups": [
+        {
+          "type": "SubGroup",
+          "group": "Ecommerce",
+          "parent_id": 1,
+          "group_id": 2,
+          "title": "Featured",
+          "description": "Tooltip that displays on hover",
+          "sort_order": "1",
+          "search_text": "Additional text to be searched by the autofill in the search bar",
+          "items": [
+            {
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "OliveAndCocoa.com",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "1",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            },
+			{
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Copy Master",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "2",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            }
+          ]
+        },
+		{
+          "type": "SubGroup",
+          "group": "Ecommerce",
+          "parent_id": 1,
+          "group_id": 2,
+          "title": "Categories",
+          "description": "Tooltip that displays on hover",
+          "sort_order": "1",
+          "search_text": "Additional text to be searched by the autofill in the search bar",
+          "items": [
+            {
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Website Cacher",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "1",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            },
+			{
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Product Builder",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "2",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            }
+          ]
+        },
+		{
+          "type": "SubGroup",
+          "group": "Ecommerce",
+          "parent_id": 1,
+          "group_id": 2,
+          "title": "BUSINESS GIFTING",
+          "description": "Tooltip that displays on hover",
+          "sort_order": "1",
+          "search_text": "Additional text to be searched by the autofill in the search bar",
+          "items": [
+            {
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Business Gifting",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "1",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            },
+			{
+              "type": "Item",
+              "group": "Ecommerce",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Custom Logo",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "2",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "group_id": 3,
+      "title": "Sales",
+      "description": "The planning group",
+      "sort_order": "1",
+      "url": "/sales",
+      "type": "Group",
+      "active": true,
+      "subGroups": [
+        {
+          "type": "SubGroup",
+          "group": "Sales",
+          "parent_id": 1,
+          "group_id": 3,
+          "title": "Cocoa",
+          "description": "Tooltip that displays on hover",
+          "sort_order": "1",
+          "search_text": "Additional text to be searched by the autofill in the search bar",
+          "items": [
+            {
+              "type": "Item",
+              "group": "CRM 2.0",
+              "parent_id": 2,
+              "item_id": 1,
+              "title": "Kronos",
+              "description": "Provides up-to-date inventory information for our website and sales team",
+              "sort_order": "1",
+              "url": "url that will be mapped to the href of the link",
+              "search_text": "Available to Sell  Provides up-to-date inventory information for our website and sales team  Planning Sales Customer Service Utilities "
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "user": {
+    "first_name": "Adam",
+    "last_name": "Leavitt",
+    "email": "aleavitt@oliveandcocoa.com"
+  }
+}

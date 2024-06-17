@@ -1,0 +1,89 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+#main_menu ul .row{
+	max-width:30rem;
+}
+#main_menu ul .row .col{
+	margin-bottom:10px;
+}
+/* when big screen */
+@media only screen and (min-width : 980px) {
+    #hamburger_menu{
+		display:none;  
+	}
+	#main_menu ul{
+	 width:max-content;
+  }
+  #main_menu ul li:first-child{
+	  padding-left:1rem;
+  }
+}
+/* when small screen */
+@media (max-width: 981px) {
+	body{
+		align-items:start;
+		padding-top:0;
+	}
+  #main_menu ul li{
+	  list-style:none;
+	  margin:7px 0;
+  }
+  #main_menu ul li:first-child{
+	  padding-left:0!important;
+  }
+  #main_menu ul{
+	  padding:8px;
+	  background:#fff;
+	  border-radius:8px;
+	  border:1px solid rgba(0, 0, 0, 0.176);
+  }
+  
+  #search_box{
+	  width:100%;
+	  margin-bottom: 10px;
+  }
+  #search_box div.autocomplete{
+	  width:100%;
+  }
+  #main_menu ul .row .col{
+	 flex:100%;
+  }
+  
+}
