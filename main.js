@@ -36,7 +36,7 @@ fetch('https://oc-api.com/api/nav/items',{
 			  str += '<ul id="accordion_'+item.id+'" class="tgsz '+dropdown_class+'"><div class="row">';
 			  subGroup.forEach(function(gItem) {
 				  let groupTitle = gItem.title;
-				  str += '<div class="col"><li class="'+padding_start+' border-bottom pb-1 mb-1">'+groupTitle.toUpperCase()+'</li>';
+				  str += '<div class="col"><li class="border-bottom pb-1 mb-1">'+groupTitle.toUpperCase()+'</li>';
 				  if(gItem.items.length > 0){
 					 const items = gItem.items;
 					  items.forEach(function(lnk) {
@@ -51,8 +51,78 @@ fetch('https://oc-api.com/api/nav/items',{
 		});
 		document.getElementById('main_menu').innerHTML = str;
 
+
+
 		const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 		const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+		function handleMouseOver(event) {
+			event.preventDefault();
+			const dropdownMenu = this.nextElementSibling;
+			dropdownMenu.classList.add('show');
+			dropdownMenus.forEach(menu => {
+				if (menu !== dropdownMenu) {
+					menu.classList.remove('show');
+				}
+			});
+			event.stopPropagation();
+		}
+
+		function handleMouseLeave(event) {
+			const dropdownMenu = this.nextElementSibling;
+			dropdownMenu.classList.remove('show');
+		}
+
+		function handleDropdownMouseEnter(event) {
+			this.classList.add('show');
+		}
+
+		function handleDropdownMouseLeave(event) {
+			this.classList.remove('show');
+		}
+
+		function handleClick(event) {
+			event.preventDefault();
+			const dropdownMenu = this.nextElementSibling;
+			dropdownMenu.classList.toggle('show');
+			dropdownMenus.forEach(menu => {
+				if (menu !== dropdownMenu) {
+					menu.classList.remove('show');
+				}
+			});
+			event.stopPropagation();
+		}
+
+		function updateEventListeners() {
+			dropdownToggles.forEach(toggle => {
+				const dropdownMenu = toggle.nextElementSibling;
+
+				// Remove all event listeners
+				toggle.removeEventListener('mouseover', handleMouseOver);
+				toggle.removeEventListener('mouseleave', handleMouseLeave);
+				toggle.removeEventListener('click', handleClick);
+				dropdownMenu.removeEventListener('mouseenter', handleDropdownMouseEnter);
+				dropdownMenu.removeEventListener('mouseleave', handleDropdownMouseLeave);
+
+				if (window.innerWidth > 1300) {
+					// Add hover event listeners for larger screens
+					toggle.addEventListener('mouseover', handleMouseOver);
+					toggle.addEventListener('mouseleave', handleMouseLeave);
+					dropdownMenu.addEventListener('mouseenter', handleDropdownMouseEnter);
+					dropdownMenu.addEventListener('mouseleave', handleDropdownMouseLeave);
+				} else {
+					// Add click event listener for smaller screens
+					toggle.addEventListener('click', handleClick);
+				}
+			});
+		}
+
+		// Initial setup
+		updateEventListeners();
+
+		// Update event listeners on window resize
+		window.addEventListener('resize', updateEventListeners);
+
 
 		function closeAllDropdowns() {
 			dropdownMenus.forEach(menu => {
@@ -60,30 +130,14 @@ fetch('https://oc-api.com/api/nav/items',{
 			});
 		}
 
-		dropdownToggles.forEach(toggle => {
-			toggle.addEventListener('click', function(event) {
-				event.preventDefault();
-
-				const dropdownMenu = toggle.nextElementSibling;
-
-				dropdownMenu.classList.toggle('show');
-
-				dropdownMenus.forEach(menu => {
-					if (menu !== dropdownMenu) {
-						menu.classList.remove('show');
-					}
-				});
-
-				event.stopPropagation();
-			});
-		});
-
 		window.addEventListener('click', function(event) {
 			if (!event.target.matches('.dropdown-toggle')) {
 				closeAllDropdowns();
 			}
 		});
 
+
+		
 
 		const dropdownToggle = document.querySelector('#hamburger_menu .navbar-toggler');
 		const dropdownMenu = document.getElementById('navbarTogglerDemo02');
