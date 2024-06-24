@@ -670,4 +670,17 @@ dl, ol, ul {
         margin: 0;
         padding-left: 1rem;
     }
+
+    #main_menu .nav-item ul.dropdown-menu-mobile {
+        display: none;
+    }
+
+    #main_menu .nav-item ul.dropdown-menu-mobile.show {
+        display: block;
+    }
+
+    #main_menu .nav-item ul.dropdown-menu-mobile.showMobile {
+        display: block;
+    }
+
 }
