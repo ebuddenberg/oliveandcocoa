@@ -2,3 +2,5 @@ node_modules/
 .vscode/
 nbproject/
 composer.lock
+.ddev/
+.idea/

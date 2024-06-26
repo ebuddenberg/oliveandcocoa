@@ -30,7 +30,7 @@ fetch('https://oc-api.com/api/nav/items',{
 				bs_toggle = '';
 				dropdown_toggle_class = '';
 			}
-		  str += '<li class="nav-item dropdown"><a class="navlink nav-link '+dropdown_toggle_class+'" href="#" role="button" data-bs-toggle="'+bs_toggle+'" '+bs_target+' aria-expanded="false" '+aria_control+' data-gid="'+item.id+'">'+ item.title + '</a>';
+		  str += '<li class="nav-item dropdown"><a  title="'+item.description+'" class="navlink nav-link '+dropdown_toggle_class+'" href="#" role="button" data-bs-toggle="'+bs_toggle+'" '+bs_target+' aria-expanded="false" '+aria_control+' data-gid="'+item.id+'">'+ item.title + '</a>';
 		  if(item.subGroups.length > 0){
 			  const subGroup = item.subGroups;
 			  str += '<ul id="accordion_'+item.id+'" class="tgsz '+dropdown_class+'"><div class="row">';
@@ -41,7 +41,7 @@ fetch('https://oc-api.com/api/nav/items',{
 				  if(gItem.items.length > 0){
 					 const items = gItem.items;
 					  items.forEach(function(lnk) {
-						  str += '<li><a class="dropdown-item" href="#1">'+lnk.title+'</a></li>';
+						  str += '<li><a title="'+lnk.description+'" class="dropdown-item" href="'+lnk.url+'">'+lnk.title+'</a></li>';
 					  }); 
 				  }
 				  str += '</div>';
